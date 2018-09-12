@@ -3,11 +3,9 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
 const App = ({data}) => {
-    if (data.loading) {
-        return null
-    }
+    if (data.loading) return null
     return (
-        <div>
+        <React.Fragment>
             <h1>{data.hi}</h1>
             <ul>
                 {data.resolutions.map(resolution => (
@@ -16,7 +14,7 @@ const App = ({data}) => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </React.Fragment>
     )
 }
 
