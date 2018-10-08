@@ -10,7 +10,7 @@ type Query {
     resolutions: [Resolution]
 }
 `
-
+//hi
 const typeDefs = [
     testSchema,
     ResolutionsSchema,
